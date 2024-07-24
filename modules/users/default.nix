@@ -32,5 +32,11 @@
     ## Home manager guide says to use it.
     wayland.windowManager.hyprland.enable = true;
     wayland.windowManager.hyprland.xwayland.enable = true;
+    
+    services.hyprpaper.enable = true;
+    services.hyprpaper.settings = { 
+      preload = [ "~/wallpaper.jpg" ];
+      wallpaper = [ "eDP-1,~/wallpaper.jpg" ]; 
+    };
   };
 } 

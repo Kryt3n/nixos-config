@@ -1,10 +1,5 @@
-
-### eventually look at boot.uki.settings because ukify sounds sick
-### other things to look at: boot.vesa, uvesafb, bumblebee
-### configurations that may be directly relevant now:
-### boot.loader.generationsDir.copyKernels
-### something to handle use cases, i.e. enable certain packages and config or functionality depending on hardware. e.g. mac needs t2 stuff, but i want to use fujitsu for server things.
-
+## To do:
+##  - https://github.com/Frost-Pheonix/nixos-config/blob/main/modules/home/waybar
 { config, lib, pkgs, inputs, ... }:
 {    
   imports =
@@ -27,6 +22,7 @@
     libinput.enable = true;
     openssh.enable = true;
     xserver = {
+    desktopManager.wallpaper.mode = "fill";
       enable = true;
       displayManager.gdm = {
         enable = true;

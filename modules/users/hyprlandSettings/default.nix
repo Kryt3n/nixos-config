@@ -6,9 +6,7 @@
     settings = {
       "$mod" = "SUPER";
 
-#      monitor = [ ",2560x1600,auto,1" ];
-      monitor = [ "eDP-1,2560x1600,auto,2" ];
-#      xwayland.force_zero_scaling = true;
+      monitor = [ "eDP-1,2560x1600,auto,1.8" ];
       
       general = {
         gaps_in=4;
