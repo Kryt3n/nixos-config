@@ -3,10 +3,11 @@
     enable = true;
     xwayland.enable = true;
 
+
     settings = {
       "$mod" = "SUPER";
-
-      monitor = [ "eDP-1,2560x1600,auto,1.8" ];
+      xwayland.force_zero_scaling = true;
+      monitor = [ "eDP-1,2560x1600,auto,1.6666666" ];
       
       general = {
         gaps_in=4;
@@ -33,6 +34,7 @@
       };
       bind = [
         "$mod, return, exec, ${pkgs.alacritty}/bin/alacritty"
+        "$mod, v, exec, ${pkgs.alacritty}/bin/alacritty -e nvim -R"
         "$mod, q, killactive"
         "$mod, e, exit"
         "$mod, l, exec, ${pkgs.hyprlock}/bin/hyprlock"
@@ -52,6 +54,8 @@
         "${pkgs.firefox}/bin/firefox"
         "${pkgs.hyprpaper}/bin/hyprpaper"
         "${pkgs.waybar}/bin/waybar"
+#       "${pkgs.vscodium.fhs}/bin/codium"
+
       ];
     };
   };

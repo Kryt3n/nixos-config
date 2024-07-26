@@ -21,7 +21,7 @@
   programs = {
     xwayland.enable = true; 
     hyprland.enable = true;
-    hyprland.xwayland.enable = true;
+    hyprland.xwayland.enable = true; 
     ## gdm does not work if not included here, even thought hypr 
     ## settings are in "../users/directory". Possible cause is that 
     ## global configuration pkgs are not imported into user dir,
