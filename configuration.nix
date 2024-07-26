@@ -9,7 +9,8 @@
       ./modules/packages/default.nix
       ./modules/bootconfig/default.nix
     ];
-
+#  stylix.enable = true;
+#  stylix.image = /home/Kryten/wallpaper.jpg;
   programs = {
     mtr.enable = true;
     gnupg.agent = {
