@@ -19,7 +19,7 @@
     home.homeDirectory = "/home/Kryten";  
     home.stateVersion  = "24.05";
     
-    programs.git.userName    = "Kryten";
+    programs.git.userName    = "Kryt3n";
     programs.git.userEmail   = "jmburn755@gmail.com";
     programs.git.extraConfig = { 
       init.defaultBranch = "main"; 
@@ -36,7 +36,7 @@
     services.hyprpaper.enable = true;
     services.hyprpaper.settings = { 
       preload = [ "~/wallpaper.jpg" ];
-      wallpaper = [ "eDP-1,~/wallpaper.jpg" ]; 
+      wallpaper = [ "eDP-1,~/wallpaper.jpg" "HDMI-A-3,~/wallpaper.jpg" ];
     };
   };
 } 

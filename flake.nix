@@ -1,3 +1,5 @@
+
+
 {
   description = "Flake for multiple machines";
 
@@ -5,15 +7,16 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nix-colors.url = "github:misterio77/nix-colors";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
   };
-
-  outputs = { nixpkgs, home-manager, nixos-hardware, ... } @ inputs:
+  
+ 
+  outputs = { nixpkgs, home-manager, nixos-hardware, nix-colors, ... } @ inputs: 
 
   let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};    
-
+    pkgs = nixpkgs.legacyPackages.${system};              
   in {
     nixosConfigurations = {
       nixos-t2 = nixpkgs.lib.nixosSystem {
@@ -28,6 +31,7 @@
           nixos-hardware.nixosModules.apple-t2
         ];
       };
+     
       nixos-nvidia = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
